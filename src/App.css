@@ -1,38 +1,334 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .headerContainer{
+    text-align: center;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .headerContainer > h1{
+    font-size: 100px;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(73, 199, 157);
   }
-}
+
+  .navItems{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    border: 5px solid black;
+  }
+
+  #design{
+    background-color: rgb(121, 197, 188);
+    color: antiquewhite;
+  }
+
+  #design:hover{
+    background-color: rgb(123, 219, 213);
+    color: antiquewhite;
+  }
+
+  #coding{
+    background-color: rgb(80, 65, 95);
+    color: aliceblue;
+  }
+
+  #coding:hover{
+    background-color: rgb(132, 86, 179);
+    color: aliceblue;
+  }
+
+ .a:hover{
+    color: rgb(255, 255, 255);
+ }
+
+ .a{
+    display: inline-block;
+    text-decoration: none;
+    color: black; 
+    padding: 50px; 
+ }
+
+  .navItems > li{
+    display: block;
+  }
+
+  .navItems > li:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+  }
+  
+  .music-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    background-color: #000000;
+  }
+  
+  .play-btn{
+    color: #24ded8;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+  }
+  
+  .skip-btn{
+    color: #24ded8;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+  }
+  
+  .play-btn, .skip-btn:hover{
+    cursor: pointer;
+  }
+  
+  .player-controls{
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .player-controls > img{
+    width: 50px;
+  }
+  
+  .player-controls > p{
+    font-size: 12px;
+    color: rgb(211, 211, 211);
+  }
+  
+  .firstSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+  }
+  
+  .firstSection > div > p{
+    padding-left: 25px;
+    margin: 0;
+    font-size: 10px;
+  }
+  
+  .icons{
+    margin-right: 25px;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .icons > a{
+    opacity: 25%;
+  }
+  
+  .icons > a:hover{
+    opacity: 100%;
+  }
+  
+  .dog{
+    width: 100%;
+  }
+  
+  .portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 25px;
+    background-color: chocolate;
+  }
+  
+  .portfolioCard{
+    width: 300px;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+    border: 5px solid black;
+    background-color: rgb(106, 139, 197);
+  }
+  
+  .portfolioimg{
+    width: 300px;
+  }
+  
+  .portfolioCard > a:hover{
+    width: 250;
+  }
+  
+  .greeting{
+    font-size: 35px;
+    padding: 15px 100px;
+    color: rgb(227, 233, 239);
+  }
+  
+  .about{
+    background-color: #ac95da;
+    padding: 50px;
+  }
+  
+  .photo{
+    width: 200px;
+    border-radius: 100%;
+  }
+  
+  footer{
+    display: flex;
+    width: 100%;
+    background-color: #6bbbbe;
+    color: rgb(90, 90, 90);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .contactmain{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 50px;
+    background-color: #6bbbbe;
+    height: 500px;
+  }
+  
+  .formcontainer > form > input{
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  
+  .formcontainer > form > textarea{
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+  
+  .formcontainer > form > button{
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background-color: #303152;
+    cursor: pointer;
+  }
+  
+  
+  .contact{
+    display: flex;
+    flex-direction: column;
+    padding: 25px 10px;
+    
+  }
+  
+  .formcontainer > form{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  
+  @media only screen and (max-width: 720px) {
+    .firstSection{
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .dog{
+      width: 100%;
+    }
+  
+    .greeting{
+      font-size: 1rem;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .contactmain{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 0 25px;
+    }
+  
+    footer{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    body{
+      overflow-x: hidden;
+    }
+  
+    .player-controls > img{
+      width: 30px;
+    }
+    
+    .player-controls > p{
+      font-size: 8px;
+      color: rgb(211, 211, 211);
+    }
+  
+    .player-controls{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .music-container{
+      padding: 10px 0;
+    }
+  }
+  @media only screen and (max-width: 347px) {
+    
+    .portfolioCard{
+      width: 225px;
+    }
+  
+    .portfolioimg{
+      width: 150px;
+    }
+  }
+  
+
+  @media only screen and (max-width: 720px) {
+
+    .a{
+        padding: 10px;
+        font-size: 8px;
+     }
+  }
+  @media only screen and (max-width: 320px) {
+    .headerContainer > h1{
+        font-size: 65px;
+      }
+
+  }
